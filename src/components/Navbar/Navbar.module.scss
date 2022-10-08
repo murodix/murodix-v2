@@ -43,9 +43,12 @@
     }
   }
 
-  &__logo {
+  &__logo__container {
     flex: 1;
     margin-left: 5%;
+  }
+
+  &__logo {
     user-select: none;
     cursor: pointer;
 
