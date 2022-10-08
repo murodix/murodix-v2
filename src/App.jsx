@@ -1,10 +1,24 @@
 import styles from './App.module.scss';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
-  console.log(styles)
+  const links = [
+    {
+      ref: "#about",
+      desc: "About"
+    },
+    {
+      ref: "#experience",
+      desc: "Experience"
+    },
+    {
+      ref: "#work",
+      desc: "Work"
+    }
+  ]
   return (
-    <div className={styles.app}>
-
+    <div className={styles.app}  >
+      <Navbar links={links} />
     </div>
   );
 }
