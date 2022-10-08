@@ -1,0 +1,67 @@
+@use "../../styles/colors";
+@use "../../styles/mixins";
+@use "../../styles/animations" as *;
+
+.navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 80px;
+  width: 100%;
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-right: 10%;
+  }
+
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    list-style: none;
+    color: colors.$mx-white;
+    user-select: none;
+    cursor: pointer;
+    @include mixins.rem(font-size, 16px);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: colors.$mx-soft-green;
+      font-weight: bold;
+    }
+  }
+
+  &__logo {
+    flex: 2;
+    align-self: flex-end;
+    margin-left: 5%;
+    user-select: none;
+    cursor: pointer;
+    svg {
+      @include mixins.rem(height, 50px);
+
+      path {
+        stroke-dasharray: 600;
+        animation: animateStroke 2s linear;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &:hover {
+        path {
+          stroke: colors.$mx-soft-green;
+        }
+      }
+    }
+  }
+}
