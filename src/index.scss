@@ -1,0 +1,13 @@
+@use "./styles/fonts";
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+  font-family: fonts.$poppins;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

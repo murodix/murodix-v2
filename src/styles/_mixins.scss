@@ -1,0 +1,28 @@
+@use "sass:math";
+@use "./vars";
+
+@mixin vendor-prefix($prop, $value) {
+  -webkit-#{$prop}: #{$value};
+  -moz-#{$prop}: #{$value};
+  -ms-#{$prop}: #{$value};
+  -o-#{$prop}: #{$value};
+  #{$prop}: #{$value};
+}
+
+@mixin media-breakpoint($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key(vars.$media-breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (max-width: map-get(vars.$media-breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+@function strip-units($number) {
+  @return math.div($number, ($number * 0 + 1));
+}
+
+@mixin rem($property, $value) {
+  #{$property}: (math.div(strip-units($value), 16)) + rem;
+}
