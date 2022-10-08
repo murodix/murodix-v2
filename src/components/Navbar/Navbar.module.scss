@@ -6,7 +6,7 @@
   position: fixed;
   left: 0;
   right: 0;
-  height: 80px;
+  height: 100px;
   width: 100%;
 
   &__container {
@@ -43,13 +43,13 @@
   }
 
   &__logo {
-    flex: 2;
-    align-self: flex-end;
+    flex: 1;
     margin-left: 5%;
     user-select: none;
     cursor: pointer;
     svg {
       @include mixins.rem(height, 50px);
+      @include mixins.rem(width, 60px);
 
       path {
         stroke-dasharray: 600;

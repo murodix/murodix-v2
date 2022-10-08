@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Navbar.module.scss';
-// import logo from
 
 const Navbar = ({ links }) => {
     return (
@@ -13,12 +12,15 @@ const Navbar = ({ links }) => {
                     </svg>
                 </a>
                 <div className={styles.navbar__links}>
-                    <a className={styles.navbar__link} href="#about">About</a>
-                    <a className={styles.navbar__link} href="#experience">Experience</a>
-                    <a className={styles.navbar__link} href="#work">Work</a>
+
+                    {links?.map((link, index) => {
+                        return (
+                            <a key={link.desc + index} className={styles.navbar__link} href={link?.ref}>{link?.desc}</a>
+                        )
+                    })}
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
