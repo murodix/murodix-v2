@@ -1,0 +1,18 @@
+{
+
+    "email" : "lmumo95@gmail.com",
+    "links": [
+        {
+          "ref": "#about",
+          "desc": "About"
+        },
+        {
+          "ref": "#experience",
+          "desc": "Experience"
+        },
+        {
+          "ref": "#work",
+          "desc": "Work"
+        }
+      ]
+}
