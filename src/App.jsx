@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './App.module.scss';
 import Navbar from './components/Navbar/Navbar';
+import Socials from './components/Socials/Socials';
 import About from './pages/about/About';
 import Hero from './pages/hero/Hero';
 
@@ -19,6 +20,7 @@ function App() {
   return (
     <div className={styles.app}  >
       <Navbar links={data?.links} />
+      <Socials socials={data?.socials} />
       <Hero />
       <About />
     </div>

@@ -14,5 +14,28 @@
           "ref": "#work",
           "desc": "Work"
         }
+      ],
+      "socials": [
+        {
+            "name": "Github",
+            "url": "https://github.com/murodix"
+        },
+        {
+            "name": "Instagram",
+            "url": "https://www.instagram.com/murodix.dev"
+        },
+        {
+            "name": "Linkedin",
+            "url": "https://www.linkedin.com/in/murodix"
+        },
+        {
+            "name": "Youtube",
+            "url": "https://www.youtube.com/channel/UCYxti90bAyHKFQU7HEyJuhA"
+        },
+        {
+            "name": "Twitter",
+            "url": "https://twitter.com/murodix_io"
+        }
+        
       ]
 }

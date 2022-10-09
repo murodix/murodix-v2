@@ -1,0 +1,21 @@
+@use "../../styles/colors";
+@use "../../styles/mixins";
+
+.social {
+  &__icon {
+    color: colors.$mx-dark-gray;
+    @include mixins.rem(font-size, 24px);
+
+    svg {
+      transition: all 0.5s ease-in-out;
+    }
+
+    &:hover {
+      color: colors.$mx-soft-green;
+
+      svg {
+        scale: 1.1;
+      }
+    }
+  }
+}
