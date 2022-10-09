@@ -11,3 +11,12 @@ body {
     display: none;
   }
 }
+
+* {
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}

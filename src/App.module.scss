@@ -1,7 +1,6 @@
 @use "./styles/colors";
 
 .app {
-  height: 100vh;
   overflow-x: hidden;
   background: colors.$mx-primary-color;
 }

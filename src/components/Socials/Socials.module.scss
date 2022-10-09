@@ -1,0 +1,7 @@
+@use "../../styles/vars";
+
+.socials {
+  position: fixed;
+  left: vars.$socials-position-left;
+  top: vars.$socials-position-top;
+}

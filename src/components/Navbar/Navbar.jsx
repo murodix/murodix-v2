@@ -14,8 +14,8 @@ const Navbar = ({ links }) => {
 
 
     return (
-        <div className={`${styles.navbar} ${isExpanded ? styles['navbar-expand'] : ""}`}>
-            <div className={styles.navbar__container}>
+        <header className={`${styles.navbar} ${isExpanded ? styles['navbar-expand'] : ""}`}>
+            <nav className={styles.navbar__container}>
                 <div className={styles.navbar__logo__container}>
                     <a href="#home" className={`${styles.navbar__logo} ${selectedLink === "#home" ? styles['navbar__logo-active'] : ""}`}
                         onClick={() => selectLink("#home")}>
@@ -40,11 +40,9 @@ const Navbar = ({ links }) => {
 
                 <div className={styles.navbar__icons} onClick={() => { setIsExpanded(!isExpanded) }}>
                     {isExpanded ? <MdClose /> : <MdMenu />}
-
-
                 </div>
-            </div>
-        </div >
+            </nav>
+        </header >
     )
 }
 
