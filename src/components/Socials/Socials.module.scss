@@ -4,4 +4,11 @@
   position: fixed;
   left: vars.$socials-position-left;
   top: vars.$socials-position-top;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
