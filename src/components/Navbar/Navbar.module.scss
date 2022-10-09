@@ -13,7 +13,7 @@
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -44,7 +44,6 @@
   }
 
   &__logo__container {
-    flex: 1;
     margin-left: 5%;
   }
 
