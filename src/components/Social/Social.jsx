@@ -9,7 +9,7 @@ import {
     FaTwitter,
     FaDiscord,
     FaCircleNotch
-} from 'react-icons/fa'
+} from 'react-icons/fa';
 
 const Social = ({ name, url }) => {
 
