@@ -54,15 +54,15 @@
 
     &-active {
       svg path {
-        stroke: colors.$mx-soft-green;
+        stroke: colors.$mx-soft-green !important;
       }
     }
 
     svg {
-      @include mixins.rem(height, 50px);
-      @include mixins.rem(width, 60px);
+      @include mixins.rem(height, 70px);
 
       path {
+        stroke: colors.$mx-dark-gray;
         stroke-dasharray: 600;
         animation: animateStroke 2s linear;
         transition: all 0.2s ease-in-out;
