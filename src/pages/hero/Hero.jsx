@@ -1,13 +1,15 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import styles from './Hero.module.scss';
-import { gsap } from 'gsap/all';
+import { gsap, ScrollTrigger } from 'gsap/all';
 
 const Hero = () => {
 
     const heroRef = useRef();
     const timeline = useRef();
 
-    useEffect(() => {
+    useLayoutEffect(() => {
+
+        gsap.registerPlugin(ScrollTrigger);
         let context = gsap.context(() => {
             timeline.current = gsap.timeline()
                 .from("." + styles.hero__name, {

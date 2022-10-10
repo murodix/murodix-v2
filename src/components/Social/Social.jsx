@@ -23,8 +23,6 @@ const Social = ({ name, url }) => {
             "FaDiscord": <FaDiscord />
         }
 
-        console.log(name);
-
         return icons[name] || <FaCircleNotch />;
     }
 

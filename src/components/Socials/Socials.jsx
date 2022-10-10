@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Socials.module.scss';
 import Social from '../Social/Social';
-import { gsap } from 'gsap/all';
+import { gsap } from 'gsap';
 
 const Socials = ({ socials }) => {
 
@@ -11,10 +11,9 @@ const Socials = ({ socials }) => {
 
     useLayoutEffect(() => {
         let context = gsap.context(() => {
-            console.log(styles.socials__social);
             timeline.current = gsap.timeline()
                 .from("." + styles.socials__social, {
-                    x: -20,
+                    x: 20,
                     opacity: 0,
                     duration: .5,
                     scale: 0.5,

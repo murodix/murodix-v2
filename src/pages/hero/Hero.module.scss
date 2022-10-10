@@ -22,6 +22,7 @@
 
   &__position {
     color: colors.$mx-soft-green;
+    opacity: 1;
     @include mixins.rem(font-size, 60px);
   }
 }

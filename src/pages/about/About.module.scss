@@ -1,4 +1,6 @@
+@use "../../styles/colors";
+
 .about {
   height: 100vh;
-  background: lightcyan;
+  background: colors.$mx-primary-color;
 }
