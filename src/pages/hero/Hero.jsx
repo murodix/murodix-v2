@@ -9,7 +9,6 @@ const Hero = () => {
 
     useEffect(() => {
         let context = gsap.context(() => {
-            console.log(styles.hero__name);
             timeline.current = gsap.timeline()
                 .from("." + styles.hero__name, {
                     y: 20,
