@@ -6,7 +6,7 @@ import { gsap } from 'gsap';
 
 const Navbar = ({ links }) => {
     const [isExpanded, setIsExpanded] = useState(false);
-    const [selectedLink, setSelectedLink] = useState(null);
+    const [selectedLink, setSelectedLink] = useState("#home");
     const navbarRef = useRef();
     const timeline = useRef();
 
