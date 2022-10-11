@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useRef } from 'react'
 import styles from './Hero.module.scss';
-import { gsap, CustomEase } from 'gsap/all';
+import { gsap } from 'gsap/all';
 
 const Hero = () => {
 
@@ -28,14 +28,6 @@ const Hero = () => {
                     duration: 1,
                     scale: 0.7
                 }, "-=0.2")
-
-
-            gsap.to("." + styles.hero__square, {
-                scale: 1.1,
-                ease: CustomEase.create("custom", "M0,0,C0.126,0.382,0.342,0.852,0.5,1,0.692,1.18,0.818,0.001,1,0"),
-                repeat: -1,
-                duration: 5
-            })
         }, heroRef)
 
         return () => context.revert();
@@ -52,8 +44,6 @@ const Hero = () => {
                     <p className={styles.hero__bio}>
                         I'm just a simple tech lover in a complicated Word. Making creative solutions for complicated people.
                     </p>
-                    <div className={`${styles.hero__square} ${styles["hero__square-left"]}`} />
-                    <div className={`${styles.hero__square} ${styles["hero__square-right"]}`} />
                 </div>
             </div>
         </section>
