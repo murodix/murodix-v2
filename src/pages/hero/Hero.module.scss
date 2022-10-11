@@ -1,13 +1,10 @@
 @use "../../styles/colors";
 @use "../../styles/mixins";
-
+@use "../../styles/animations" as *;
 .hero {
   width: 100%;
   height: 100vh;
   background: colors.$mx-primary-color;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   h1,
   h2 {
@@ -15,14 +12,51 @@
     letter-spacing: 2px;
   }
 
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
   &__name {
     color: colors.$mx-dark-gray;
-    @include mixins.rem(font-size, 54px);
+    font-size: clamp(40px, 8vw, 90px);
   }
 
   &__position {
     color: colors.$mx-soft-green;
     opacity: 1;
-    @include mixins.rem(font-size, 60px);
+    font-size: clamp(40px, 8vw, 70px);
+  }
+
+  &__bio {
+    max-width: 600px;
+    color: colors.$mx-dark-gray;
+    font-weight: bold;
+    font-size: clamp(16px, 4vw, 20px);
+  }
+
+  &__square {
+    height: 250px;
+    width: 250px;
+    rotate: 45deg;
+    border: solid 5px colors.$mx-soft-green;
+    opacity: 0.6;
+    position: absolute;
+
+    &-left {
+      left: -130px;
+      bottom: 10%;
+    }
+
+    &-right {
+      right: -130px;
+      top: 20%;
+    }
   }
 }
