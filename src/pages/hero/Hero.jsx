@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useRef } from 'react'
 import styles from './Hero.module.scss';
-import { gsap, ScrollTrigger, CustomEase } from 'gsap/all';
+import { gsap, CustomEase } from 'gsap/all';
 
 const Hero = () => {
 
@@ -8,8 +8,6 @@ const Hero = () => {
     const timeline = useRef();
 
     useLayoutEffect(() => {
-        console.log(styles);
-        gsap.registerPlugin(ScrollTrigger);
         let context = gsap.context(() => {
             timeline.current = gsap.timeline()
                 .from("." + styles.hero__name, {
