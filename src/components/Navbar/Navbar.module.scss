@@ -9,6 +9,7 @@
   right: 0;
   height: vars.$navbar-height;
   width: 100%;
+  z-index: 1;
 
   &__container {
     width: 100%;
@@ -89,8 +90,7 @@
     }
 
     &__logo svg {
-      @include mixins.rem(height, 30px);
-      @include mixins.rem(width, 40px);
+      @include mixins.rem(height, 50px);
     }
 
     &__links {
