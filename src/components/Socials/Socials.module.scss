@@ -4,6 +4,7 @@
   position: fixed;
   right: vars.$socials-position-right;
   top: vars.$socials-position-top;
+  z-index: 1;
 
   &__container {
     display: flex;

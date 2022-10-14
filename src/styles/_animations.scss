@@ -10,3 +10,19 @@
     stroke-dashoffset: 0;
   }
 }
+
+@keyframes fallingDown {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}

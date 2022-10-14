@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useRef } from 'react'
 import styles from './Hero.module.scss';
 import { gsap } from 'gsap/all';
+import ScrollDown from '../../components/scroll-down/ScrollDown';
 
 const Hero = () => {
 
@@ -45,6 +46,10 @@ const Hero = () => {
                         I'm just a simple tech lover in a complicated Word. Making creative solutions for complicated people.
                     </p>
                 </div>
+                <div className={styles.hero__scrollIcon}>
+                    <ScrollDown navigateTo={"about"} />
+                </div>
+
             </div>
         </section>
     )
