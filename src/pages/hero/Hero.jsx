@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useRef } from 'react'
 import styles from './Hero.module.scss';
 import { gsap } from 'gsap/all';
-import ScrollDown from '../../components/scroll-down/ScrollDown';
+import ScrollDown from '../../components/ScrollDown/ScrollDown';
 
 const Hero = () => {
 

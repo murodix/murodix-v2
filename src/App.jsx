@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './App.module.scss';
-import Navbar from './components/navbar/Navbar';
-import Socials from './components/socials/Socials';
+import Navbar from './components/Navbar/Navbar';
+import Socials from './components/Socials/Socials';
 import About from './pages/about/About';
 import Hero from './pages/hero/Hero';
 

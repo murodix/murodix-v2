@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Socials.module.scss';
-import Social from '../social/Social';
+import Social from '../Social/Social';
 import { gsap } from 'gsap';
 
 const Socials = ({ socials }) => {
