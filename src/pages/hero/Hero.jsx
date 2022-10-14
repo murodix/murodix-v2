@@ -29,6 +29,12 @@ const Hero = () => {
                     duration: 1,
                     scale: 0.7
                 }, "-=0.2")
+                .from("." + styles.hero__scrollIcon, {
+                    y: 40,
+                    opacity: 0,
+                    duration: 1,
+                    scale: 0.7
+                })
         }, heroRef)
 
         return () => context.revert();
