@@ -46,7 +46,6 @@ const Hero = () => {
                     opacity: 0,
                     scrollTrigger: {
                         trigger: heroRef.current,
-                        markers: true,
                         start: "top top",
                         end: "bottom center",
                         scrub: 1
