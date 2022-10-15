@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './ScrollDown.module.scss';
+import styles from './ScrollDownIcon.module.scss';
 
 const ScrollDown = ({ navigateTo }) => {
     return (

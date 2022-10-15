@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useRef } from 'react'
 import styles from './Hero.module.scss';
-import { gsap } from 'gsap/all';
-import ScrollDown from '../../components/ScrollDown/ScrollDown';
+import { gsap, ScrollTrigger } from 'gsap/all';
+import ScrollDown from '../../components/ScrollDown/ScrollDownIcon';
 
 const Hero = () => {
 
@@ -10,6 +10,8 @@ const Hero = () => {
 
     useLayoutEffect(() => {
         let context = gsap.context(() => {
+            gsap.registerPlugin(ScrollTrigger);
+
             timeline.current = gsap.timeline()
                 .from("." + styles.hero__name, {
                     y: 20,
@@ -35,6 +37,22 @@ const Hero = () => {
                     duration: 1,
                     scale: 0.7
                 })
+
+            gsap.fromTo("." + styles.hero__scrollIcon,
+                {
+                    opacity: 1
+                },
+                {
+                    opacity: 0,
+                    scrollTrigger: {
+                        trigger: heroRef.current,
+                        markers: true,
+                        start: "top top",
+                        end: "bottom center",
+                        scrub: 1
+                    }
+                })
+
         }, heroRef)
 
         return () => context.revert();
