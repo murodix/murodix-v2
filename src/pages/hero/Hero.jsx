@@ -65,7 +65,7 @@ const Hero = () => {
                     <h2 className={styles.hero__name}>Luis Munoz</h2>
                     <h1 className={styles.hero__position}>Software Engineer</h1>
                     <p className={styles.hero__bio}>
-                        I'm just a simple tech lover in a complicated Word. Making creative solutions for complicated people.
+                        I'm just a simple tech lover in a complicated World. Making creative solutions for complicated people.
                     </p>
                 </div>
                 <div className={styles.hero__scrollIcon}>
