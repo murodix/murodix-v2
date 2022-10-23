@@ -46,12 +46,11 @@ const Hero = () => {
                     opacity: 0,
                     scrollTrigger: {
                         trigger: heroRef.current,
-                        start: "top top",
+                        start: "20% top",
                         end: "bottom center",
                         scrub: 1
                     }
                 })
-
         }, heroRef)
 
         return () => context.revert();
