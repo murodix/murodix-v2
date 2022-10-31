@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Socials.module.scss';
 import Social from '../Social/Social';
-import { gsap } from 'gsap';
+import { gsap, CSSRulePlugin } from 'gsap/all';
 
 const Socials = ({ socials }) => {
 
@@ -10,15 +10,23 @@ const Socials = ({ socials }) => {
     const timeline = useRef();
 
     useLayoutEffect(() => {
+        gsap.registerPlugin(CSSRulePlugin);
+
         let context = gsap.context(() => {
+            let socialBeforeSelector = CSSRulePlugin.getRule("." + styles.socials + ":before");
             timeline.current = gsap.timeline()
+                .to(socialBeforeSelector, {
+                    opacity: 0.5,
+                    duration: 2,
+                    scale: 1,
+                })
                 .from("." + styles.socials__social, {
                     x: 20,
                     opacity: 0,
                     duration: .5,
                     scale: 0.5,
                     stagger: .2
-                }, "+=.5")
+                }, "-=1")
         }, socialsRef)
 
         return () => context.revert();
