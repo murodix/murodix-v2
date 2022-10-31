@@ -40,7 +40,6 @@ const Hero = () => {
 
             gsap.fromTo("." + styles.hero__scrollIcon,
                 {
-                    opacity: 1
                 },
                 {
                     opacity: 0,
@@ -48,7 +47,7 @@ const Hero = () => {
                         trigger: heroRef.current,
                         start: "20% top",
                         end: "bottom center",
-                        scrub: 1
+                        scrub: true
                     }
                 })
         }, heroRef)
